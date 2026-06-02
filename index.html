@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>School</title>
+        <link rel="icon" type="image/jpeg" href="images/hateschool.jpeg""> 
+        <style>
+            .right-form { background-color: rgb(32,1,1); padding: 20px; display: flex; flex-direction: column; gap: 10px; max-width: 420px; color: white; }
+            .right-form input, .right-form select { width: 100%; box-sizing: border-box; padding: 8px; }
+            .right-form label { color: white; }
+            .right-form .row { display: flex; gap: 10px; }
+            .right-form .field { flex: 1; display: flex; flex-direction: column; gap: 6px; }
+        </style>
+    </head>
+
+    <body style="background-color: rgb(32, 1, 1)">
+
+        <hr style="height: 5px; background-color: darkgrey; width: 98%;">
+
+        <!--THE FLEX ROW, LEFT + RIGHT-->
+        <div style="display: flex; padding: 20px; gap: 150px;">
+
+            <!--START LEFT SIDE-->
+            <div>
+                <img src="images/hateschool.jpeg" alt="Philosophy School logo" style="width: 145px; height: 135px; border-radius: 50px">
+                <h1 style="color: white; margin-bottom: 4px">
+                    Philosophy School
+                </h1>
+                <hr align="left" style="background-color: darkgrey; width: 90%; height: 4px; border: none; margin-top: 0;"> <br>
+               
+                <img src="images/Existentialism img.jpeg" alt="Existentialism Art" style="width: 400px; height: 550px; border-radius: 20px">
+                <h5 style="margin-bottom: 4px">
+                    He who has a why to live for can bear almost any how.
+                </h5>
+                <hr align="left" style="background-color: darkgrey; height: 2px; width: 100%; margin-top: 0;">
+
+            <!--END LEFT SIDE   -->
+            </div>
+
+            <!-- START RIGHT SIDE-->
+             <div>
+                <h3><i>About Philosophy School</i></h3>
+                <pre><i>
+Philosophy School is a learning space dedicated to exploring fundamental questions about life, existence, knowledge, and human thought.
+It focuses on developing critical thinking, logical reasoning, and deeper understanding of how we interpret reality.
+The purpose of this school is not to provide fixed answers, but to encourage students to question assumptions, analyze ideas,
+and think independently. Through discussions on philosophy, ethics, and different schools of thought such as existentialism,
+stoicism, and absurdism, students learn how to reason clearly and express ideas with confidence. Philosophy School aims to train
+the mind to think beyond surface-level understanding and to engage with complex ideas in a structured way. </i></pre>
+                <hr style="background-color: darkgrey; width: 100%; height: 1px;">
+
+                <div style="display: flex; gap: 20px; align-items: flex-start;">
+                    <div style="border: 2px solid darkgrey; padding: 10px; width: 48%; border-radius: 15px;">
+                        <form id="registrationForm" class="right-form" action="indext.php" method="POST" enctype="multipart/form-data">
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 10px;">
+                                <h3 style="margin: 20px;">Student Registration Form</h3>
+                                <img src="images/hateschool.jpeg" alt="Form image" width="120" style="border-radius: 8pc; height: auto; object-fit: cover;">
+                            </div>
+                    <label>Student Name:</label>
+                    <div class="row">
+                        <div class="field">
+                            <label for="firstname">First</label>
+                            <input type="text" 
+                                id="firstname"
+                                name="firstname" 
+                                placeholder="First"
+                                required>
+                        </div>
+                        <div class="field">
+                            <label for="lastname">Last</label>
+                            <input type="text"
+                                id="lastname"
+                                name="lastname"
+                                placeholder="Last"
+                                required>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="field">
+                            <label for="age"> Age</label>
+                            <input type="text"
+                                id="age"
+                                name="age"
+                                placeholder="age"
+                                required>
+                        </div>
+                        <div class="field">
+                            <label for="fathername">Father Name</label>
+                            <input type="text"
+                                id="fathername"
+                                name="fathername"
+                                placeholder="father name"
+                                required>
+                        </div>
+                    </div>
+
+                    <label>Contact</label>
+                    <div class="row">
+                        <div class="field">
+                            <label for="mobile_no">Mobile NO</label>
+                            <input type="tel"
+                                id="mobile_no"
+                                name="mobile"
+                                placeholder="+92..."
+                                minlength="10"
+                                maxlength="14"
+                                required>
+                        </div>
+                        <div class="field">
+                            <label for="email">Email Id</label>
+                            <input type="email"
+                                    id="email"
+                                    name="email"
+                                    placeholder="student@gmail.com"
+                                    required>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="field">
+                            <label for="course">Select Course:</label>
+                            <select id="course">
+                                <option value="Existentialism">Existentialism </option>
+                                <option value="Nihilism">Nihilism </option>
+                                <option value="Absurdism">Absurdism</option>
+                                <option value="Stoicism">Stoicism</option>
+                                <option value="Epicureansim">Epicureansim</option>
+                                <option value="Platonism & Aristotelianism">Platonism & Aristotelianism</option>
+                                <option value="Socratic">Socratic</option>
+                            </select>
+                        </div>
+                    
+                        <div class="field">
+                            <label for="bday"> Date Of Birth</label>
+                                <input type="date"
+                                    id="bday"
+                                    required>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="field">
+                            <label for="gender">Gender</label>
+                            <select id="gender" required>
+                                <option>Male</option>
+                                <option>Female</option>
+                            </select>
+                        </div>
+
+                        <div class="field">
+                            <label for="file">Student Photo</label>
+                            <input type="file"
+                                   accept="image/jpeg"
+                                   required>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="field">
+                            <input type="submit">
+                        </div>
+                        <div class="field">
+                            <input type="reset">
+                        </div>
+                    </div>
+
+                    </form>
+                </div>
+                    <div style="width: 42%; display: flex; flex-direction: column; gap: 12px;">
+                        <div style="border: 2px solid darkgrey; padding: 12px; border-radius: 15px; width: 100%; background-color: rgba(255,255,255,0.04);">
+                            <label for="comment" style="font-weight: bold;">Why Philosophy School?</label>
+                            <textarea id="comment" 
+                                      name="comment"
+                                      form="registrationForm" 
+                                      rows="12" 
+                                      cols="8" 
+                                      placeholder="Why Philosophy?" 
+                                      required 
+                                      style="width: 100%; box-sizing: border-box; margin-top: 8px; padding: 8px;"></textarea>
+                        </div>
+
+                        <hr align="right" style="width: 100%; height: 2px; background-color: darkgrey;">
+                            <img src="images/Nietzschelook.jpeg" 
+                                alt="Nietzsche" 
+                                style="width: 420px;
+                                 height: 350px;
+                                  object-fit: cover;
+                                   object-position: top center;
+                                    display: block;
+                                     border-radius: 13px;">
+                    </div>
+                </div>
+                <!--END RIGHT SIDE-->
+             </div>
+
+        <!--END FLEX ROW-->
+        </div>
+
+        <hr style="height: 5px; background-color: darkgrey; width: 98%;">
+
+
+    </body>
+
+</html>
